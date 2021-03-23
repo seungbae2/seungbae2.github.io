@@ -94,9 +94,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "SUNGBAE LEE"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Software Engineer with Android, Full-stack and Machine Learning."
   location         : "Seoul, Korea"
   email            :
   links:
