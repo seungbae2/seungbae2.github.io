@@ -112,6 +112,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+      
+# Site wide Header Image      
+header: /assets/images/banner.png
 
 # Site Footer
 footer:
