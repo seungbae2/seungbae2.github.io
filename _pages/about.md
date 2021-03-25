@@ -51,4 +51,4 @@ permalink: /about/
 + Korean (Native)
 + English (Fluent)
 
-[Go to the Home](
+[Go to the Home]({{ site.url }}{{ site.baseurl }})
