@@ -278,7 +278,7 @@ defaults:
   # _posts
 
   - scope:
-      path: ""
+      path: "_pages"
       type: pages
     values:
       comments: true
