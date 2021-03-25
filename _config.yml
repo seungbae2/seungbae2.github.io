@@ -275,10 +275,10 @@ defaults:
       share: true
       related: true
   
-  # _posts
-
+  # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
-      comments: true
+      layout: single
+      author_profile: true
