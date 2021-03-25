@@ -16,7 +16,7 @@ permalink: /about.html
 ## Experience
 
 + FNS (2019.09-2020.09)
-  + Java (Spring Framework), PHP (Yii Framework)
+  + Java (Spring Framework), PHP (Yii Framework) 개발 및 운영
   + Android 앱 개발 및 운영
   + 웹서버 운영 (Apache, Tomcat)
   + Git 서버 운영 및 버전 관리
