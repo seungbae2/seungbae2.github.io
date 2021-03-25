@@ -37,9 +37,8 @@ permalink: /about/
 ## Key Skills
 
 + Windows / Mac OS / Linux
-+ Android / Java / Python / Javascript
++ Android / Java / Python / Javascript / PHP
 + C++ / C / QT
-+ PHP
 + Oracle / MongoDB
 + Data Science / Pandas, Numpy, Matplotlib
 + Machine Learning / scikit-learn
