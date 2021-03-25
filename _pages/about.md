@@ -1,5 +1,4 @@
 ---
-layout: single
 title: About
 tagline: Who am I?
 permalink: /about/
