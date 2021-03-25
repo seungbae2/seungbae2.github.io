@@ -2,7 +2,7 @@
 layout: page
 title: About
 tagline: Who am I?
-permalink: /about.html
+permalink: /about/
 
 ---
 
