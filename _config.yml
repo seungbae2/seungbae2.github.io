@@ -25,7 +25,7 @@ url                      : "https://seungbae2.github.io"
 baseurl                  : "/"
 repository               : "seungbae2/seungbae2.github.io"
 teaser                   : "/assets/images/banner.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
