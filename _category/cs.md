@@ -1,4 +1,4 @@
 ---
 tag: cs
-permalink: "/category/cs"
+permalink: "/cs"
 ---
