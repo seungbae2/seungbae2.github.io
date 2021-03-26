@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "CS Fundamentals"
-    url: /category/cs
+    url: /category/cs/
   - title: "Machine Learning"
     url: /category/ml/
   - title: "Mobile App"
