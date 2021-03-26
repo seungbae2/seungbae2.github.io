@@ -1,4 +1,4 @@
 ---
 tag: ml
-permalink: "/category/ml"
+permalink: "/ml/"
 ---
