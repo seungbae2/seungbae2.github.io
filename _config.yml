@@ -283,3 +283,15 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _cs
+  - scope:
+      path: ""
+      type: cs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "cs"
