@@ -1,6 +1,6 @@
 ---
 title: "Computer Science Fundamentals"
 permalink: /cs/
-layout: posts
+layout: categories
 author_profile: true
 ---
