@@ -261,17 +261,17 @@ compress_html:
   ignore:
     envs: development
     
-# Collections
-collections:
-  cs:
-    output: true
-    permalink: /:collection/:path/
-  ml:
-    output: true
-    permalink: /:collection/:path/
-  mobile:
-    output: true
-    permalink: /:collection/:path/
+# # Collections
+# collections:
+#   cs:
+#     output: true
+#     permalink: /:collection/:path/
+#   ml:
+#     output: true
+#     permalink: /:collection/:path/
+#   mobile:
+#     output: true
+#     permalink: /:collection/:path/
 
 # Defaults
 defaults:
