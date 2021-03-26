@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "CS Fundamentals"
-    url: /cs/
+    url: /cs/hello/
   - title: "Machine Learning"
     url: /ml/
   - title: "Mobile App"
