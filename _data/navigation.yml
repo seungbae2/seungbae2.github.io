@@ -8,3 +8,20 @@ main:
     url: /mobile/
   - title: "About"
     url: /about/
+
+
+# documentation links
+cs:
+  - title: Data Strucure
+    url: /cs/
+#     children:
+#       - title: "Quick-Start Guide"
+#         url: /docs/quick-start-guide/
+#       - title: "Structure"
+#         url: /docs/structure/
+#       - title: "Installation"
+#         url: /docs/installation/
+#       - title: "Upgrading"
+#         url: /docs/upgrading/
+  - title: Algorithms
+    url: /cs/
