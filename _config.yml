@@ -294,21 +294,21 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # cs
-  - scope:
-      path: ""
-      type: cs
-    values:
-      layout: "category"
-  # ml
-  - scope:
-      path: ""
-      type: ml
-    values:
-      layout: "category"
-  # mobile
-  - scope:
-      path: ""
-      type: mobile
-    values:
-      layout: "category"
+#   # cs
+#   - scope:
+#       path: ""
+#       type: cs
+#     values:
+#       layout: "category"
+#   # ml
+#   - scope:
+#       path: ""
+#       type: ml
+#     values:
+#       layout: "category"
+#   # mobile
+#   - scope:
+#       path: ""
+#       type: mobile
+#     values:
+#       layout: "category"
