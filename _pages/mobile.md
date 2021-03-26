@@ -1,6 +1,6 @@
 ---
 title: "Mobile Application Programming"
 permalink: /mobile/
-layout: posts
+layout: archive
 author_profile: true
 ---
