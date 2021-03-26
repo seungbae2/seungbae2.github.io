@@ -289,9 +289,21 @@ defaults:
       type: cs
     values:
       layout: single
-      read_time: false
       author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "cs"
+      share: true
+  # _ml
+  - scope:
+      path: ""
+      type: ml
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _mobile
+  - scope:
+      path: ""
+      type: mobile
+    values:
+      layout: single
+      author_profile: false
+      share: true
