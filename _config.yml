@@ -260,7 +260,18 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
+    
+# Collections
+collections:
+  cs:
+    output: true
+    permalink: /:collection/:path/
+  ml:
+    output: true
+    permalink: /:collection/:path/
+  mobile:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -283,27 +294,21 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _cs
+  # cs
   - scope:
-      path: "_cs"
+      path: ""
       type: cs
     values:
-      layout: archive
-      author_profile: false
-      share: true
-  # _ml
+      layout: "category"
+  # ml
   - scope:
-      path: "_ml"
+      path: ""
       type: ml
     values:
-      layout: single
-      author_profile: false
-      share: true
-  # _mobile
+      layout: "category"
+  # mobile
   - scope:
-      path: "_mobile"
+      path: ""
       type: mobile
     values:
-      layout: single
-      author_profile: false
-      share: true
+      layout: "category"
