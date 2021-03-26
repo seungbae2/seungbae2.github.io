@@ -1,4 +1,4 @@
 ---
 tag: mobile
-permalink: "/category/mobile"
+permalink: "/mobile/"
 ---
