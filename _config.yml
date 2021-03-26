@@ -285,15 +285,15 @@ defaults:
       author_profile: true
   # _cs
   - scope:
-      path: ""
+      path: "_cs"
       type: cs
     values:
-      layout: single
+      layout: archive
       author_profile: false
       share: true
   # _ml
   - scope:
-      path: ""
+      path: "_ml"
       type: ml
     values:
       layout: single
@@ -301,7 +301,7 @@ defaults:
       share: true
   # _mobile
   - scope:
-      path: ""
+      path: "_mobile"
       type: mobile
     values:
       layout: single
