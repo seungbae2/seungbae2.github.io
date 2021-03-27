@@ -6,5 +6,5 @@ headline: "Windows 환경에서 Synology 외부 네트워크 드라이브 설정
 tags: algorithms
 comments: true
 published: true
-categories: cs
+categories: ml
 ---
