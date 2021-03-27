@@ -261,6 +261,7 @@ compress_html:
   ignore:
     envs: development
     
+categories: [cs,ml,mobile]
 # # Collections
 # collections:
 #   cs:
