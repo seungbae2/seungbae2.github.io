@@ -1,16 +1,20 @@
-
 ---
 layout: archive
 ---
-
-{{ content }}
+<h1> "{{ page.category }}" </h1>
 <br>
-<section class="taxonomy__section">
-  <div class="entries-{{ page.entries_layout | default: 'list' }}">
-    {% for post in site.categories['cs'] %}
-    {% include archive-single.html type=page.entries_layout %}
-    {% endfor %}
-  </div>
-  <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }}
-    &uarr;</a>
-</section>
+<ul class="post-list"> 
+  {% assign category = page.category | default: page.title %}
+  {% for post in site.categories[cs] %}
+    <li>
+      {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+      </h2>
+      <span class="post-description">{{ post.excerpt | markdownify| truncatewords: 30 }}</span>
+      <br>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
