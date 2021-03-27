@@ -1,20 +1,28 @@
 ---
-layout: archive
+layout: default
 ---
-<h1> "{{ page.category }}" </h1>
-<br>
-<ul class="post-list"> 
-  {% assign category = page.category | default: page.title %}
-  {% for post in site.categories[cs] %}
-    <li>
-      {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h2>
-        <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
-      </h2>
-      <span class="post-description">{{ post.excerpt | markdownify| truncatewords: 30 }}</span>
-      <br>
-      <hr>
-    </li>
-  {% endfor %}
-</ul>
+<div class="categories">
+    <h1 class="h1 category-title">
+      Topic:&nbsp;{{ page.category-name }}/
+    </h1>
+    <div class="posts">
+      {% for post in site.categories[page.category-name] %}
+        <div class="post py3">
+          <p class="post-meta">
+        {% if site.date_format %}
+            {{ post.date | date: site.date_format }}
+        {% else %}
+            {{ post.date | date: "%b %-d, %Y" }}
+        {% endif %}
+        </p>
+          <a href="{{ post.url | relative_url }}" class="post-link">
+            <h3 class="h1 post-title">
+              {{ post.title }}
+            </h3>
+          </a>
+          <span class="post-summary">
+              {{ post.excerpt }}
+          </span>
+        </div>
+    </div>
+</div>
