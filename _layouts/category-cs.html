@@ -4,7 +4,13 @@ layout: archive
 
 {{ content }}
 
-<h1> "{{ page.category }}" </h1>
+{% assign tags_max = 0 %}
+{% for tag in site.tags %}
+  {% if tag[1].size > tags_max %}
+    {% assign tags_max = tag[1].size %}
+  {% endif %}
+{% endfor %}
+
 <br>
 <ul class="post-list"> 
   {% assign category = page.category | default: page.title %}
