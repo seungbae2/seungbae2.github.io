@@ -46,7 +46,7 @@ export default function Home() {
       {/* Featured Projects */}
       <section className="pb-16">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold">Published Apps</h2>
+          <h2 className="text-2xl font-bold">Projects</h2>
           <Link
             href="/projects"
             className="text-sm text-muted transition-colors hover:text-accent"
