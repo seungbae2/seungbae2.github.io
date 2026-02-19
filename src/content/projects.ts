@@ -3,6 +3,7 @@ import { Project } from "@/lib/types";
 export const projects: Project[] = [
   {
     slug: "arsketch",
+    category: "opensource",
     name: "ArSketch",
     tagline: "Real-time AR Drawing with Live Web Streaming",
     description:
@@ -57,6 +58,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mammanote",
+    category: "published",
     name: "MammaNote",
     tagline: "Baby Food Meal Planning & Inventory Management App",
     description:
@@ -118,6 +120,7 @@ export const projects: Project[] = [
   },
   {
     slug: "catsapp",
+    category: "opensource",
     name: "CatsApp",
     tagline: "Resilient Cat Image Gallery with Offline-First Pagination",
     description:
@@ -167,6 +170,7 @@ export const projects: Project[] = [
   },
   {
     slug: "weaklyeat",
+    category: "published",
     name: "WeaklyEat",
     tagline: "Offline-First Weekly Meal Planning App",
     description:
@@ -229,6 +233,7 @@ export const projects: Project[] = [
   },
   {
     slug: "beanchive",
+    category: "published",
     name: "Beanchive",
     tagline: "Specialty Coffee Archive App",
     description:
@@ -270,6 +275,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bokjak-bokjak",
+    category: "published",
     name: "Bokjak-Bokjak",
     tagline: "Real-time Seoul Population Density App",
     description:

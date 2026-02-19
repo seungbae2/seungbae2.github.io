@@ -1,5 +1,6 @@
 export interface Project {
   slug: string;
+  category: "published" | "opensource";
   name: string;
   tagline: string;
   description: string;
