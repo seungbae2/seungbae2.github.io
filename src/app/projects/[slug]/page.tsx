@@ -56,6 +56,7 @@ export default async function ProjectDetailPage({
           <StoreLinks
             playStore={project.storeLinks.playStore}
             appStore={project.storeLinks.appStore}
+            github={project.storeLinks.github}
           />
         </div>
       </header>

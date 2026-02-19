@@ -9,6 +9,7 @@ export interface Project {
   storeLinks: {
     playStore?: string;
     appStore?: string;
+    github?: string;
   };
   features: string[];
   architecture: string;

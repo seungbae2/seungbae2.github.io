@@ -37,6 +37,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <StoreLinks
             playStore={project.storeLinks.playStore}
             appStore={project.storeLinks.appStore}
+            github={project.storeLinks.github}
             size="sm"
           />
         </div>

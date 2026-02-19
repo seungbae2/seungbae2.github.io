@@ -2,6 +2,60 @@ import { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
+    slug: "arsketch",
+    name: "ArSketch",
+    tagline: "Real-time AR Drawing with Live Web Streaming",
+    description:
+      "A native Android AR drawing app that lets users draw on real-world surfaces and in mid-air, then live-stream the augmented scene to web viewers via WebRTC. Features bidirectional interaction where web viewers can send drawings back to the AR scene.",
+    period: "Jan 2026 – Present",
+    role: "Solo Developer",
+    stack: [
+      "Kotlin 2.2",
+      "Jetpack Compose",
+      "ARCore",
+      "LiveKit (WebRTC)",
+      "Hilt",
+      "Coroutines/Flow",
+      "Multi-module Clean Architecture",
+      "TypeScript/Vite",
+    ],
+    storeLinks: {
+      github: "https://github.com/seungbae2/ArSketch",
+    },
+    features: [
+      "Surface and air drawing modes with real-time AR plane detection and anchor placement",
+      "Brush customization with adjustable color, size, and opacity for both AR and 2D drawing",
+      "WebRTC live streaming of AR camera feed to web viewers via LiveKit SDK",
+      "Bidirectional web viewer interaction — viewers draw on 2D canvas and send strokes back to the AR scene",
+      "Undo/Redo system with full stroke history management across drawing modes",
+    ],
+    architecture:
+      "8-module Clean Architecture with strict dependency rules. Domain module is pure Kotlin JVM with zero Android dependencies. Streaming layer uses interface separation (streaming-api / streaming) to decouple WebRTC implementation from business logic.",
+    challenges: [
+      {
+        title: "AR-to-WebRTC Video Pipeline",
+        problem:
+          "ARCore camera frames need to be captured, encoded, and streamed in real-time to web viewers without impacting AR rendering performance.",
+        solution:
+          "Implemented a custom video capture pipeline that taps into ARCore's frame callback, converts frames to the format expected by LiveKit's video track, and manages frame pacing to maintain smooth AR rendering alongside streaming.",
+      },
+      {
+        title: "Bidirectional DataChannel Communication",
+        problem:
+          "Web viewers need to send 2D drawing strokes to the AR device, requiring reliable bidirectional data transmission alongside the video stream.",
+        solution:
+          "Utilized LiveKit DataChannel API with a custom serialization protocol for stroke data. Implemented coordinate mapping between the web 2D canvas and AR 3D space for accurate stroke placement.",
+      },
+      {
+        title: "DI Scope Management Across Modules",
+        problem:
+          "AR session, streaming session, and drawing state each have different lifecycles, making Hilt scope management complex across 8 modules.",
+        solution:
+          "Defined custom Hilt scopes aligned with feature lifecycles — AR components scoped to Activity, streaming components to a custom StreamingScope, and drawing state to ViewModel scope with proper cleanup on scope destruction.",
+      },
+    ],
+  },
+  {
     slug: "mammanote",
     name: "MammaNote",
     tagline: "Baby Food Meal Planning & Inventory Management App",
@@ -59,6 +113,55 @@ export const projects: Project[] = [
           "Meal completion triggers multiple operations: consumption record creation, cube inventory deduction across batches, and UI state update.",
         solution:
           "Implemented replaceStockAtomic with database-level ACID transactions for all-or-nothing execution, plus reversible meal completion that cleanly rolls back all operations.",
+      },
+    ],
+  },
+  {
+    slug: "catsapp",
+    name: "CatsApp",
+    tagline: "Resilient Cat Image Gallery with Offline-First Pagination",
+    description:
+      "A native Android cat image gallery app built with offline-first architecture. Features infinite scroll pagination with automatic offline fallback, image zoom, responsive grid layout, and comprehensive error handling — all powered by a 12-module Clean Architecture with build-logic convention plugins.",
+    period: "Apr 2025 – Present",
+    role: "Solo Developer",
+    stack: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Hilt",
+      "Room",
+      "Paging 3",
+      "Retrofit/OkHttp",
+      "Coil",
+      "Coroutines/Flow",
+      "Sandwich",
+      "Navigation Compose",
+    ],
+    storeLinks: {
+      github: "https://github.com/seungbae2/CatsApp",
+    },
+    features: [
+      "Infinite scroll pagination with seamless page loading and scroll position retention",
+      "Automatic offline fallback with cached data display and network retry on connectivity restore",
+      "Pinch-to-zoom image viewer with smooth gesture handling and full-screen mode",
+      "Responsive grid layout that adapts columns based on screen width",
+      "Comprehensive error handling UI with retry actions, empty states, and loading indicators",
+    ],
+    architecture:
+      "12-module Clean Architecture with build-logic convention plugins for consistent Gradle configuration. Strict compile-time dependency rules enforced through data-api/data module separation — feature modules depend only on data-api interfaces, never on data implementations.",
+    challenges: [
+      {
+        title: "RemoteMediator to PagingSource Migration",
+        problem:
+          "Initial RemoteMediator approach tightly coupled network and database layers, making offline behavior unpredictable and difficult to test.",
+        solution:
+          "Migrated to a custom PagingSource with explicit cache-first strategy. Network responses are persisted to Room first, then served from the local database, giving full control over offline fallback behavior.",
+      },
+      {
+        title: "Automatic Retry on Network Restoration",
+        problem:
+          "When the device goes offline mid-scroll, the paging pipeline stops. Users had to manually trigger retry after regaining connectivity.",
+        solution:
+          "Implemented a ConnectivityObserver using ConnectivityManager callbacks that emits network state changes as a Flow. Combined with Paging 3's retry mechanism to automatically resume loading when connectivity is restored.",
       },
     ],
   },
