@@ -5,19 +5,28 @@ import StoreLinks from "./StoreLinks";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group relative flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/40 hover:bg-card-hover">
+    <div className="card-hover group relative flex flex-col rounded-xl border border-border bg-card p-6 hover:border-accent/40 hover:bg-card-hover">
       <Link
         href={`/projects/${project.slug}`}
         className="absolute inset-0 z-0"
         aria-label={`View ${project.name} details`}
       />
 
-      {/* Placeholder for screenshot */}
-      <div className="mb-4 flex h-40 items-center justify-center rounded-lg bg-background text-muted">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-          <rect x="5" y="2" width="14" height="20" rx="2" />
-          <line x1="12" y1="18" x2="12" y2="18.01" strokeWidth="2" strokeLinecap="round" />
-        </svg>
+      {/* Thumbnail or gradient placeholder */}
+      <div className="mb-4 flex h-40 items-center justify-center overflow-hidden rounded-lg bg-background">
+        {project.thumbnail ? (
+          <img
+            src={project.thumbnail}
+            alt={project.name}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/20 to-accent/5">
+            <span className="text-4xl font-bold text-accent/30">
+              {project.name.charAt(0)}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col">
