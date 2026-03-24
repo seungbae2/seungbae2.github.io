@@ -137,22 +137,43 @@ export default async function ProjectDetailPage({
         </AnimateOnScroll>
       )}
 
-      {/* Screenshot Placeholder */}
-      <AnimateOnScroll>
-        <section className="mt-10">
-          <h2 className="text-xl font-semibold">Screenshots</h2>
-          <div className="mt-4 grid grid-cols-3 gap-3">
-            {[1, 2, 3].map((n) => (
-              <div
-                key={n}
-                className="flex aspect-[9/16] items-center justify-center rounded-lg border border-border bg-card text-xs text-muted"
-              >
-                Coming Soon
-              </div>
-            ))}
-          </div>
-        </section>
-      </AnimateOnScroll>
+      {/* Demo Video */}
+      {project.video && (
+        <AnimateOnScroll>
+          <section className="mt-10">
+            <h2 className="text-xl font-semibold">Demo</h2>
+            <video
+              className="mt-4 w-full rounded-lg border border-border"
+              controls
+              playsInline
+              src={project.video}
+            />
+          </section>
+        </AnimateOnScroll>
+      )}
+
+      {/* Screenshots */}
+      {project.screenshots && project.screenshots.length > 0 && (
+        <AnimateOnScroll>
+          <section className="mt-10">
+            <h2 className="text-xl font-semibold">Screenshots</h2>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              {project.screenshots.map((src, i) => (
+                <div
+                  key={i}
+                  className="flex h-64 items-center justify-center rounded-lg border border-border bg-card"
+                >
+                  <img
+                    src={src}
+                    alt={`${project.name} screenshot ${i + 1}`}
+                    className="h-full w-full rounded-lg object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        </AnimateOnScroll>
+      )}
 
       {/* Back link */}
       <AnimateOnScroll>

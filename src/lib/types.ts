@@ -15,6 +15,8 @@ export interface Project {
   features: string[];
   architecture: string;
   thumbnail?: string;
+  screenshots?: string[];
+  video?: string;
   challenges: {
     title: string;
     problem: string;

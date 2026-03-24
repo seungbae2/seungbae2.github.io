@@ -23,6 +23,10 @@ export const projects: Project[] = [
     storeLinks: {
       github: "https://github.com/seungbae2/ArSketch",
     },
+    screenshots: [
+      "/projects/arsketch/arsketch_app_screenshot.png",
+      "/projects/arsketch/arsketch_web_screenshot.png",
+    ],
     features: [
       "Surface and air drawing modes with real-time AR plane detection and anchor placement",
       "Brush customization with adjustable color, size, and opacity for both AR and 2D drawing",
