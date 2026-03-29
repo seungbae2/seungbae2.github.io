@@ -6,6 +6,7 @@ export const projects: Project[] = [
     category: "opensource",
     name: "ArSketch",
     tagline: "Real-time AR Drawing with Live Web Streaming",
+    thumbnail: "/projects/arsketch/arsketch_app_screenshot.webp",
     description:
       "A native Android AR drawing app that lets users draw on real-world surfaces and in mid-air, then live-stream the augmented scene to web viewers via WebRTC. Features bidirectional interaction where web viewers can send drawings back to the AR scene.",
     period: "Jan 2026 – Present",
@@ -65,6 +66,7 @@ export const projects: Project[] = [
     category: "published",
     name: "MammaNote",
     tagline: "Baby Food Meal Planning & Inventory Management App",
+    thumbnail: "/projects/mammanote/mammanote_icon.webp",
     description:
       "A cross-platform baby food management app with offline-first architecture. Helps parents plan meals, track cube-based food inventory with FIFO consumption, monitor allergies, and manage 5 progressive baby food stages — all without network dependency.",
     period: "Oct 2025 – Present",
@@ -183,6 +185,7 @@ export const projects: Project[] = [
     category: "published",
     name: "WeaklyEat",
     tagline: "Offline-First Weekly Meal Planning App",
+    thumbnail: "/projects/weaklyeat/weaklyeat_icon.webp",
     description:
       "A production-grade Flutter meal planning app with strict Clean Architecture. Features auto-generated shopping lists from weekly meal plans, budget trend analysis, sealed-class error handling, and full bilingual support (EN/KR).",
     period: "May 2025 – Nov 2025",
@@ -246,6 +249,7 @@ export const projects: Project[] = [
     category: "published",
     name: "Beanchive",
     tagline: "Specialty Coffee Archive App",
+    thumbnail: "/projects/beanchive/beanchive_icon.webp",
     description:
       "A coffee tasting archive app with Clean Architecture and DDD feature separation. Features on-premise backend with token-based image authentication, guest-to-member account migration, and comprehensive coffee tasting records.",
     period: "Oct 2024 – Apr 2025",
@@ -288,6 +292,7 @@ export const projects: Project[] = [
     category: "published",
     name: "Bokjak-Bokjak",
     tagline: "Real-time Seoul Population Density App",
+    thumbnail: "/projects/bokjak-bokjak/bokjak_icon.webp",
     description:
       "A native Android app that visualizes real-time population density data across Seoul districts on an interactive map. Built with modern Android stack including Jetpack Compose and Clean Architecture.",
     period: "2021",

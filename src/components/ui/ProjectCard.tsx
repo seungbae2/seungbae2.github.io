@@ -21,7 +21,11 @@ export default function ProjectCard({ project }: { project: Project }) {
             alt={project.name}
             width={400}
             height={160}
-            className="h-full w-full object-cover"
+            className={
+              project.category === "published"
+                ? "h-full w-full object-contain p-6"
+                : "h-full w-full object-cover"
+            }
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/20 to-accent/5">
