@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/types";
 import Badge from "./Badge";
@@ -15,9 +16,11 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Thumbnail or gradient placeholder */}
       <div className="mb-4 flex h-40 items-center justify-center overflow-hidden rounded-lg bg-background">
         {project.thumbnail ? (
-          <img
+          <Image
             src={project.thumbnail}
             alt={project.name}
+            width={400}
+            height={160}
             className="h-full w-full object-cover"
           />
         ) : (

@@ -24,8 +24,8 @@ export const projects: Project[] = [
       github: "https://github.com/seungbae2/ArSketch",
     },
     screenshots: [
-      "/projects/arsketch/arsketch_app_screenshot.png",
-      "/projects/arsketch/arsketch_web_screenshot.png",
+      "/projects/arsketch/arsketch_app_screenshot.webp",
+      "/projects/arsketch/arsketch_web_screenshot.webp",
     ],
     features: [
       "Surface and air drawing modes with real-time AR plane detection and anchor placement",
@@ -88,10 +88,10 @@ export const projects: Project[] = [
         "https://apps.apple.com/us/app/%EB%A7%98%EB%A7%88%EB%85%B8%ED%8A%B8-%EC%9D%B4%EC%9C%A0%EC%8B%9D-%EA%B8%B0%EB%A1%9D-%EA%B4%80%EB%A6%AC/id6755870362",
     },
     screenshots: [
-      "/projects/mammanote/mammanote_screenshot_1.PNG",
-      "/projects/mammanote/mammanote_screenshot_2.PNG",
-      "/projects/mammanote/mammanote_screenshot_3.PNG",
-      "/projects/mammanote/mammanote_screenshot_4.PNG",
+      "/projects/mammanote/mammanote_screenshot_1.webp",
+      "/projects/mammanote/mammanote_screenshot_2.webp",
+      "/projects/mammanote/mammanote_screenshot_3.webp",
+      "/projects/mammanote/mammanote_screenshot_4.webp",
     ],
     features: [
       "60-day meal auto-generation engine from 230-ingredient database with nutrition-group balancing across 5 progressive food stages",

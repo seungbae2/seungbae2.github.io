@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 
 export default function ScreenshotGallery({
   screenshots,
@@ -52,10 +53,11 @@ export default function ScreenshotGallery({
             onClick={() => setOpenIndex(i)}
             className="flex h-64 cursor-pointer items-center justify-center rounded-lg border border-border bg-card transition-colors hover:border-accent/40"
           >
-            <img
+            <Image
               src={src}
               alt={`${projectName} screenshot ${i + 1}`}
-              loading="lazy"
+              width={400}
+              height={600}
               className="h-full w-full rounded-lg object-contain"
             />
           </button>
@@ -87,9 +89,11 @@ export default function ScreenshotGallery({
           </button>
 
           {/* Image */}
-          <img
+          <Image
             src={screenshots[openIndex]}
             alt={`${projectName} screenshot ${openIndex + 1}`}
+            width={800}
+            height={1200}
             className="max-h-[75vh] max-w-[75vw] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
