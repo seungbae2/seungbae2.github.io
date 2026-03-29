@@ -66,11 +66,15 @@ export default function ScreenshotGallery({
 
       {openIndex !== null && createPortal(
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${projectName} screenshot gallery`}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
           onClick={close}
         >
           {/* Close button */}
           <button
+            aria-label="Close gallery"
             onClick={close}
             className="absolute top-6 right-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-xl text-white transition-colors hover:bg-white/20"
           >
@@ -79,6 +83,7 @@ export default function ScreenshotGallery({
 
           {/* Previous */}
           <button
+            aria-label="Previous screenshot"
             onClick={(e) => {
               e.stopPropagation();
               prev();
@@ -100,6 +105,7 @@ export default function ScreenshotGallery({
 
           {/* Next */}
           <button
+            aria-label="Next screenshot"
             onClick={(e) => {
               e.stopPropagation();
               next();

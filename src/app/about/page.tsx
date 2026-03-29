@@ -77,25 +77,25 @@ export default function AboutPage() {
       </AnimateOnScroll>
 
       {/* Tech Stack */}
-      <AnimateOnScroll>
-        <section className="mt-12">
+      <section className="mt-12">
+        <AnimateOnScroll>
           <h2 className="text-xl font-semibold">Tech Stack</h2>
-          <div className="mt-4 space-y-4">
-            {Object.entries(techStack).map(([category, techs], i) => (
-              <AnimateOnScroll key={category} delay={i * 80}>
-                <div>
-                  <h3 className="text-sm font-medium text-muted">{category}</h3>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {techs.map((tech) => (
-                      <Badge key={tech}>{tech}</Badge>
-                    ))}
-                  </div>
+        </AnimateOnScroll>
+        <div className="mt-4 space-y-4">
+          {Object.entries(techStack).map(([category, techs], i) => (
+            <AnimateOnScroll key={category} delay={i * 80}>
+              <div>
+                <h3 className="text-sm font-medium text-muted">{category}</h3>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {techs.map((tech) => (
+                    <Badge key={tech}>{tech}</Badge>
+                  ))}
                 </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </section>
-      </AnimateOnScroll>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+      </section>
 
       {/* Certifications */}
       <AnimateOnScroll>

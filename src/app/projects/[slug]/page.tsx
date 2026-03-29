@@ -112,30 +112,30 @@ export default async function ProjectDetailPage({
 
       {/* Technical Challenges */}
       {project.challenges.length > 0 && (
-        <AnimateOnScroll>
-          <section className="mt-10">
+        <section className="mt-10">
+          <AnimateOnScroll>
             <h2 className="text-xl font-semibold">Technical Challenges</h2>
-            <div className="mt-4 space-y-6">
-              {project.challenges.map((challenge, i) => (
-                <AnimateOnScroll key={i} delay={i * 100}>
-                  <div className="card-hover rounded-lg border border-border p-5">
-                    <h3 className="font-medium">{challenge.title}</h3>
-                    <div className="mt-3 space-y-2 text-sm text-muted">
-                      <div>
-                        <span className="font-medium text-red-400">Problem: </span>
-                        {challenge.problem}
-                      </div>
-                      <div>
-                        <span className="font-medium text-green-400">Solution: </span>
-                        {challenge.solution}
-                      </div>
+          </AnimateOnScroll>
+          <div className="mt-4 space-y-6">
+            {project.challenges.map((challenge, i) => (
+              <AnimateOnScroll key={i} delay={i * 100}>
+                <div className="card-hover rounded-lg border border-border p-5">
+                  <h3 className="font-medium">{challenge.title}</h3>
+                  <div className="mt-3 space-y-2 text-sm text-muted">
+                    <div>
+                      <span className="font-medium text-red-400">Problem: </span>
+                      {challenge.problem}
+                    </div>
+                    <div>
+                      <span className="font-medium text-green-400">Solution: </span>
+                      {challenge.solution}
                     </div>
                   </div>
-                </AnimateOnScroll>
-              ))}
-            </div>
-          </section>
-        </AnimateOnScroll>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </section>
       )}
 
       {/* Demo Video */}
@@ -147,6 +147,7 @@ export default async function ProjectDetailPage({
               className="mt-4 w-full rounded-lg border border-border"
               controls
               playsInline
+              preload="metadata"
               src={project.video}
             />
           </section>

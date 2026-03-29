@@ -171,6 +171,20 @@ h6 {
   );
 }
 
+/* ========== No JavaScript Fallback ========== */
+
+@media (scripting: none) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-animate {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 /* ========== Reduced Motion ========== */
 
 @media (prefers-reduced-motion: reduce) {
