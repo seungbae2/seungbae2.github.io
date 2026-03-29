@@ -5,7 +5,7 @@ import StoreLinks from "./StoreLinks";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="card-hover group relative flex flex-col rounded-xl border border-border bg-card p-6 hover:border-accent/40 hover:bg-card-hover">
+    <div className="card-hover group relative flex h-full flex-col rounded-xl border border-border bg-card p-6 hover:border-accent/40 hover:bg-card-hover">
       <Link
         href={`/projects/${project.slug}`}
         className="absolute inset-0 z-0"

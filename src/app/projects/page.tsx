@@ -32,7 +32,7 @@ export default function ProjectsPage() {
         </AnimateOnScroll>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {published.map((project, i) => (
-            <AnimateOnScroll key={project.slug} delay={i * 100}>
+            <AnimateOnScroll key={project.slug} delay={i * 100} className="h-full">
               <ProjectCard project={project} />
             </AnimateOnScroll>
           ))}
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
         </AnimateOnScroll>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {opensource.map((project, i) => (
-            <AnimateOnScroll key={project.slug} delay={i * 100}>
+            <AnimateOnScroll key={project.slug} delay={i * 100} className="h-full">
               <ProjectCard project={project} />
             </AnimateOnScroll>
           ))}

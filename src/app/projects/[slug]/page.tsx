@@ -5,6 +5,7 @@ import { projects } from "@/content/projects";
 import Badge from "@/components/ui/Badge";
 import StoreLinks from "@/components/ui/StoreLinks";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
+import ScreenshotGallery from "@/components/ui/ScreenshotGallery";
 
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -157,20 +158,10 @@ export default async function ProjectDetailPage({
         <AnimateOnScroll>
           <section className="mt-10">
             <h2 className="text-xl font-semibold">Screenshots</h2>
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              {project.screenshots.map((src, i) => (
-                <div
-                  key={i}
-                  className="flex h-64 items-center justify-center rounded-lg border border-border bg-card"
-                >
-                  <img
-                    src={src}
-                    alt={`${project.name} screenshot ${i + 1}`}
-                    className="h-full w-full rounded-lg object-contain"
-                  />
-                </div>
-              ))}
-            </div>
+            <ScreenshotGallery
+              screenshots={project.screenshots}
+              projectName={project.name}
+            />
           </section>
         </AnimateOnScroll>
       )}

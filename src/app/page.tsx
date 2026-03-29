@@ -70,7 +70,7 @@ export default function Home() {
         </AnimateOnScroll>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {projects.map((project, i) => (
-            <AnimateOnScroll key={project.slug} delay={i * 100}>
+            <AnimateOnScroll key={project.slug} delay={i * 100} className="h-full">
               <ProjectCard project={project} />
             </AnimateOnScroll>
           ))}

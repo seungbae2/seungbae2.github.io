@@ -87,6 +87,12 @@ export const projects: Project[] = [
       appStore:
         "https://apps.apple.com/us/app/%EB%A7%98%EB%A7%88%EB%85%B8%ED%8A%B8-%EC%9D%B4%EC%9C%A0%EC%8B%9D-%EA%B8%B0%EB%A1%9D-%EA%B4%80%EB%A6%AC/id6755870362",
     },
+    screenshots: [
+      "/projects/mammanote/mammanote_screenshot_1.PNG",
+      "/projects/mammanote/mammanote_screenshot_2.PNG",
+      "/projects/mammanote/mammanote_screenshot_3.PNG",
+      "/projects/mammanote/mammanote_screenshot_4.PNG",
+    ],
     features: [
       "60-day meal auto-generation engine from 230-ingredient database with nutrition-group balancing across 5 progressive food stages",
       "FIFO-based cube inventory management with ACID transactions, multi-batch tracking, and 14-day expiration alerts",
