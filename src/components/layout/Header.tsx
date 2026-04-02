@@ -46,8 +46,9 @@ export default function Header() {
           onClick={() => setMobileOpen(!mobileOpen)}
           className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:text-foreground md:hidden"
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             {mobileOpen ? (
               <path
                 d="M5 5l10 10M15 5L5 15"
